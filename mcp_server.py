@@ -27,7 +27,18 @@ class SuperProductivityMCPServer:
         if os.name == 'nt':  # Windows
             data_dir = os.environ.get('APPDATA', os.path.expanduser('~/AppData/Roaming'))
         else:  # Linux/Mac
-            data_dir = os.environ.get('XDG_DATA_HOME', os.path.expanduser('~/.local/share'))
+            # On macOS, Super Productivity runs in a sandbox so its plugin sees a different
+            # home directory. Use the container path if it exists so paths align.
+            sp_container_data = os.path.expanduser(
+                '~/Library/Containers/com.super-productivity.app/Data/.local/share'
+            )
+            sp_container_root = os.path.expanduser(
+                '~/Library/Containers/com.super-productivity.app'
+            )
+            if os.path.isdir(sp_container_root):
+                data_dir = sp_container_data
+            else:
+                data_dir = os.environ.get('XDG_DATA_HOME', os.path.expanduser('~/.local/share'))
         
         self.base_dir = Path(data_dir) / 'super-productivity-mcp'
         self.command_dir = self.base_dir / 'plugin_commands'

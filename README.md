@@ -102,7 +102,7 @@ Access the SP-MCP dashboard from the menu. The dashboard shows:
 The plugin uses file-based communication through:
 - Windows: `%APPDATA%\super-productivity-mcp\`
 - Linux: `~/.local/share/super-productivity-mcp/`
-- macOS: `~/Library/Application Support/super-productivity-mcp/`
+- macOS: `~/Library/Containers/com.super-productivity.app/Data/.local/share/super-productivity-mcp/`
 
 Commands are exchanged through `plugin_commands/` and `plugin_responses/` directories.
 
@@ -115,4 +115,4 @@ Commands are exchanged through `plugin_commands/` and `plugin_responses/` direct
 ### Commands Not Working
 - Verify both plugin and MCP server are running
 - Check file permissions on communication directories
-- Check `mcp_server.log` in the data directory
+- Check `mcp_server.log` in the communication directory (see the file-based communication paths above; on macOS this is inside the container path, not `Library/Application Support`)
