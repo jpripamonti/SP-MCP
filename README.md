@@ -64,7 +64,7 @@ Once that's done, restart claude (and Super Prod for good measure) and you shoul
 4. **Install the plugin:**
    - Open Super Productivity → Settings → Plugins
    - Click "Upload Plugin"
-   - Select `plugin.js`
+   - Select `plugin.zip`
 
 5. **Restart Claude Desktop**
 
@@ -88,6 +88,16 @@ Once that's done, restart claude (and Super Prod for good measure) and you shoul
 "Show me all projects"
 "Get all tags"
 ```
+
+### Habit Management
+```
+"Show me all my habits"
+"Create a habit called 'Drink water' with a daily goal of 8"
+"Mark the 'Drink water' habit as done for today"
+"Set the 'Meditation' habit value to 1 for 2026-04-25"
+"Rename the 'Exercise' habit to 'Morning workout'"
+```
+
 
 ## Dashboard
 
