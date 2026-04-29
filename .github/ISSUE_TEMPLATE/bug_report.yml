@@ -1,0 +1,49 @@
+name: Bug Report
+description: Create a report to help us improve SP-MCP
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+  - type: input
+    id: sp_version
+    attributes:
+      label: Super Productivity Version
+      description: What version of Super Productivity are you using? (e.g. 14.0.0)
+      placeholder: "14.0.0"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      description: What OS are you using? (Windows, macOS, Linux)
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Describe the bug
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+      description: How can we reproduce the behavior?
+      placeholder: |
+        1. Open Claude Desktop
+        2. Ask Claude to '....'
+        3. See error
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs (mcp_server.log)
+      description: Please paste any relevant errors from your mcp_server.log file if applicable.
+    validations:
+      required: false
