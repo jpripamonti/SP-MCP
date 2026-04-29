@@ -1,4 +1,6 @@
-# SP-MCP
+# SP-MCP (Actively Maintained Fork)
+
+> **Note:** This is an actively maintained fork of the original [organicmoron/SP-MCP](https://github.com/organicmoron/SP-MCP) repository. The original project appears to be inactive. This fork includes new features (like Habit Management), bug fixes, and continuous updates.
 
 Bridge between the amazing [Super Productivity](https://github.com/johannesjo/super-productivity/) app and MCP (Model Context Protocol) servers for Claude Desktop integration.
 
@@ -24,12 +26,12 @@ https://github.com/user-attachments/assets/cc118173-023f-48cb-8213-427027e475af
 ### Automatic Setup
 
 **Windows:**
-1. Clone this repo
+1. Run `git clone https://github.com/jpripamonti/SP-MCP.git`
 2. Run `setup.bat`
 3. Follow the prompts
 
-**Linux/Mac UNTESTED:**
-1. Clone this repo
+**Mac / Linux (Untested):**
+1. Run `git clone https://github.com/jpripamonti/SP-MCP.git`
 2. Run `chmod +x setup.sh && ./setup.sh`
 3. Follow the prompts
 
@@ -126,3 +128,8 @@ Commands are exchanged through `plugin_commands/` and `plugin_responses/` direct
 - Verify both plugin and MCP server are running
 - Check file permissions on communication directories
 - Check `mcp_server.log` in the communication directory (see the file-based communication paths above; on macOS this is inside the container path, not `Library/Application Support`)
+
+## Issues and Feedback
+
+Since the original repository is currently inactive, please report any bugs or feature requests directly in this fork's issue tracker: 
+[https://github.com/jpripamonti/SP-MCP/issues](https://github.com/jpripamonti/SP-MCP/issues)
